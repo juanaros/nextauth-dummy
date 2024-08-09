@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import {signIn, useSession, signOut} from 'next-auth/react'
+import Image from 'next/image'
 
 function Navbar() {
 
@@ -18,7 +19,7 @@ function Navbar() {
                     Dashboard
                 </Link>
                 <p className='text-white'>{session.user.name}</p>
-                <img src={session.user.image} alt="profile pic" className='w-10 h-10 rounded-full'/>
+                <Image src={session.user.image} alt="profile pic" className='w-10 h-10 rounded-full'/>
                 <button className='text-slate-100' onClick={() => signOut(
                     {callbackUrl: "/"}
                 )}>Logout</button>
