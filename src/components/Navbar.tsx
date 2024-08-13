@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import {signIn, useSession, signOut} from 'next-auth/react'
-// import Image from 'next/image'
 
 function Navbar() {
 
